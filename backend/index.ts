@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cors from "cors";
 import { createTodo, completeTodo } from "./types";
 import { validateInput } from "./validateInput";
 import { todo } from "./schema/todo";
@@ -11,6 +12,7 @@ const connectionUrl = process.env.MONGODB_URL;
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.post('/todo', async (req,res) => {
     // Validate input
