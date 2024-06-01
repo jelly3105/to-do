@@ -1,3 +1,4 @@
 1. Create express boilerplate.
 2. Validate input.
-3. 
+3. Create Mongodb schema.
+4. 
